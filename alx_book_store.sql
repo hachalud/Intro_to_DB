@@ -7,9 +7,9 @@ CREATE TABLE books (
     price DOUBLE,
     publication_date DATE
 );
-CREATE TABLE authors (
+CREATE TABLE Authors (
     author_id INT PRIMARY KEY,
-    name VARCHAR(255),
+    author_name VARCHAR(255),
 );
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY,
