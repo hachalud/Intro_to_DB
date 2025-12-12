@@ -17,10 +17,11 @@ CREATE TABLE customers (
     email VARCHAR(215),
     address TEXT
 );
-CREATE TABLE orders (
-    order_id (Primary Key)
-    customer_id (Foreign Key referencing Customers table)
-    order_date DATE
+CREATE TABLE Orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    order_date DATE,
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 );
 CREATE TABLE order_details (
     orderdetailid (Primary Key)
