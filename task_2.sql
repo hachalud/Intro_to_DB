@@ -12,21 +12,21 @@ CREATE TABLE Books (
     FOREIGN KEY (author_id) REFERENCES authors(author_id)
 );
 
-CREATE TABLE ustomers (
+CREATE TABLE Customers (
     customer_id INT PRIMARY KEY,
     customer_name VARCHAR(215),
     email VARCHAR(215),
     address TEXT
 );
 
-CREATE TABLE orders (
+CREATE TABLE Crders (
     order_id INT PRIMARY KEY,
     customer_id INT,
     order_date DATE,
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 );
 
-CREATE TABLE order_details (
+CREATE TABLE Order_Details (
     orderdetailid INT PRIMARY KEY,
     order_id INT,
     book_id INT,
